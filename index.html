@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube字幕合成ツール</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+
+            /* これつけたらdiv下の余白消えた！*/
+            /* https://arts-factory.net/img-vertical-align/ */
+            vertical-align: top;
+        }
+
+        #cv {
+            position: relative;
+            /* text-align: center; */
+
+            /* https://coliss.com/articles/build-websites/operation/css/fit-content-instead-of-the-inline-block-value.html */
+            width: fit-content;
+            height: auto;
+
+            /* display: inline-block; */
+        }
+
+        .caption {
+            display: inline-block;
+            white-space: pre-wrap;
+            background: rgba(8, 8, 8, 0.75);
+            font-size: 22.8px; /* 16 or 22.8 */
+            color: rgb(255, 255, 255); 
+            fill: rgb(255, 255, 255);
+            font-family: "YouTube Noto", Roboto, "Arial Unicode Ms", Arial, Helvetica, Verdana, "PT Sans Caption", sans-serif;
+        }
+
+        #caption_area {
+            /* https://qiita.com/shi_design_/items/ea024913b143a0655dc5 */
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            /* right: 50%; */
+            transform: translateX(-50%);
+        }
+    </style>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>YouTube字幕合成ツール</h1>
+    <p>
+        お好きな画像にYouTubeの字幕を合成することができるツールです。
+    </p>
+    <h2>使い方</h2>
+    <ol>
+        <li>「ファイルを選択」ボタンを押し、合成先の画像を選択します。</li>
+        <li>下のテキストボックスに表示させたい字幕を入力します。複数行も可。</li>
+        <li>「合成」ボタンを押すと、合成された画像が下に表示されます。<br>もちろん画像として保存できます。</li>
+    </ol>
+    <p>
+        <textarea id="textarea" cols="40" rows="5">buzz ちゃったか</textarea>
+        <input type="file" id="input_image" accept="image/*">
+        <input type="submit" id="submit" value="合成">
+    </p>
+    
+    <div>
+        <h3>↓ 生成画像(「合成」ボタンを押すと更新されます)</h3>
+        <div id="result"></div>
+    </div>
+    
+    <div id="sample">
+        <div id="cv"> 
+            <img src="./kinoko.jpg" id="image">
+            <span id="caption_area"></span>
+        </div>
+    </div>
+
+    <p>
+        サンプル画像提供元: <a href="https://pixabay.com/ja/users/adege-4994132/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">adege</a>による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">Pixabay</a>からの画像
+    </p>
+    <script src="./main.js"></script>
+</body>
+</html>
+
