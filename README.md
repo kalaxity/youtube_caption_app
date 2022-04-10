@@ -1,6 +1,7 @@
 # YouTube字幕合成ツール
 お好きな画像にYouTubeの字幕を合成することができるツールです。
-url -> [under construction] 
+
+url -> https://kalaxity.github.io/youtube_caption_app/ 
 
 
 ## 使い方
