@@ -1,7 +1,7 @@
 # YouTube字幕合成ツール
 お好きな画像にYouTubeの字幕を合成することができるツールです。
 
-url -> https://kalaxity.github.io/youtube_caption_app/ 
+URL: https://kalaxity.github.io/youtube_caption_app/ 
 
 
 ## 使い方
@@ -22,3 +22,5 @@ https://html2canvas.hertzen.com
 というサイトで提供されていたキノコの画像
 (投稿者:<a href="https://pixabay.com/ja/users/adege-4994132/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">adege</a>さん)
 を使わせて頂きました。この場を借りてお礼申し上げます。
+
+画像URL: https://pixabay.com/images/id-2817729/
