@@ -1,0 +1,38 @@
+img {
+    max-width: 100%;
+    height: auto;
+
+    /* これつけたらdiv下の余白消えた！*/
+    /* https://arts-factory.net/img-vertical-align/ */
+    vertical-align: top;
+}
+
+#cv {
+    position: relative;
+    /* text-align: center; */
+
+    /* https://coliss.com/articles/build-websites/operation/css/fit-content-instead-of-the-inline-block-value.html */
+    width: fit-content;
+    height: auto;
+
+    /* display: inline-block; */
+}
+
+.caption {
+    display: inline-block;
+    white-space: pre-wrap;
+    background: rgba(8, 8, 8, 0.75);
+    font-size: 22.8px; /* 16 or 22.8 */
+    color: rgb(255, 255, 255); 
+    fill: rgb(255, 255, 255);
+    font-family: "YouTube Noto", Roboto, "Arial Unicode Ms", Arial, Helvetica, Verdana, "PT Sans Caption", sans-serif;
+}
+
+#caption_area {
+    /* https://qiita.com/shi_design_/items/ea024913b143a0655dc5 */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    /* right: 50%; */
+    transform: translateX(-50%);
+}
