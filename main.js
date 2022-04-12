@@ -8,6 +8,14 @@ const submit = document.getElementById("submit"); // 合成実行ボタン
 const cv = document.getElementById("cv"); // スクショ対象エリア
 const result = document.getElementById("result"); // 生成画像描画エリア
 
+/** @type {HTMLInputElement} caption_top */
+const caption_top = document.getElementById("caption_top");
+/** @type {HTMLInputElement} caption_left */
+const caption_left = document.getElementById("caption_left"); 
+
+const caption_top_per = document.getElementById("cap_top_per");
+const caption_left_per = document.getElementById("cap_left_per");
+
 const reader = new FileReader();
 
 let drawCaption = () => {
@@ -56,6 +64,22 @@ input_image.addEventListener("change", () => {
 submit.addEventListener("click", () => {
     drawCaption();
     doGousei();
+});
+
+caption_top.addEventListener("input", () => {
+    caption_top_per.innerText = caption_top.value;
+});
+
+caption_top.addEventListener("change", () => {
+    caption_area.style.bottom = caption_top.value + "%";
+});
+
+caption_left.addEventListener("input", () => {
+    caption_left_per.innerText = caption_left.value;
+});
+
+caption_left.addEventListener("change", () => {
+    caption_area.style.left = caption_left.value + "%";
 });
 
 //gousei.addEventListener("click", doGousei);

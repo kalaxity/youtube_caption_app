@@ -13,18 +13,36 @@
     <p>
         お好きな画像にYouTubeの字幕を合成することができるツールです。
     </p>
+
     <h2>使い方</h2>
     <ol>
         <li>「ファイルを選択」ボタンを押し、合成先の画像を選択します。</li>
         <li>下のテキストボックスに表示させたい字幕を入力します。複数行も可。</li>
         <li>「合成」ボタンを押すと、合成された画像が下に表示されます。<br>もちろん画像として保存できます。</li>
     </ol>
+
     <p>
         <textarea id="textarea" cols="40" rows="5">buzz ちゃったか</textarea>
+        <br>
         <input type="file" id="input_image" accept="image/*">
         <input type="submit" id="submit" value="合成">
     </p>
+
+    <h4>字幕位置の調整(実験中機能)</h4>
+    <p>
+        <p>
+            合成ボタンを押すと反映されます<br>
+            リアルタイムプレビューができないか検討中です
+        </p>
+        縦: <input type="range" name="cap_top"  id="caption_top"  min="0" max="100" value="90">
+        <span id="cap_top_per">90</span>%
+        <br>
+        横: <input type="range" name="cap_left" id="caption_left" min="0" max="100" value="40">
+        <span id="cap_left_per">40</span>%
+    </p>
     
+    <hr>
+
     <div>
         <h3>↓ 生成画像(「合成」ボタンを押すと更新されます)</h3>
         <div id="result"></div>
@@ -38,11 +56,16 @@
     </div>
 
     <p>
-        サンプル画像提供元: <a href="https://pixabay.com/ja/users/adege-4994132/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">adege</a>による<a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">Pixabay</a>からの画像
+        サンプル画像提供元: 
+        <a href="https://pixabay.com/ja/users/adege-4994132/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">adege</a>
+        による
+        <a href="https://pixabay.com/ja/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2817729">Pixabay</a>
+        からの画像
     </p>
     <p>
         GitHubのリポジトリは<a href="https://github.com/kalaxity/youtube_caption_app">こちら</a>
     </p>
+    
     <script src="./main.js"></script>
 </body>
 </html>

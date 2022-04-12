@@ -24,3 +24,11 @@ https://html2canvas.hertzen.com
 を使わせて頂きました。この場を借りてお礼申し上げます。
 
 画像URL: https://pixabay.com/images/id-2817729/
+
+---
+
+## 更新履歴
+大きなもののみ
+
+- 2020/04/12 字幕位置調整機能を実験的に追加。
+
