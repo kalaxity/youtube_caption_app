@@ -71,7 +71,7 @@ caption_top.addEventListener("input", () => {
 });
 
 caption_top.addEventListener("change", () => {
-    caption_area.style.bottom = caption_top.value + "%";
+    caption_area.style.top = caption_top.value + "%";
 });
 
 caption_left.addEventListener("input", () => {
